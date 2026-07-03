@@ -1,0 +1,104 @@
+aid: embarkvet
+name: Embark Veterinary
+review:
+  question: Does Embark expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-03'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. Embark does not publish any documented
+    public API - REST, WebSocket, SSE, or otherwise. There is no server-push
+    transport, and no request/response API surface, on Embark's own platform to
+    model. Embark is a direct-to-consumer canine genetics service whose results
+    are delivered through its website and mobile apps, plus a per-account raw
+    genetic data file download. There is nothing to model in an AsyncAPI or
+    OpenAPI document without fabrication.
+findings:
+  summary: |
+    Embark Veterinary does not publish a documented public WebSocket API - or any
+    public developer API. Embark is a canine genomics / dog DNA testing company
+    (breed identification, ancestry, and 270+ genetic health conditions from a
+    cheek swab analyzed across 200,000+ genetic markers). It is a
+    direct-to-consumer (DTC) service. Customers view results in Embark's own web
+    dashboard and iOS/Android apps, and can download their dog's raw genetic data
+    file for personal use and sharing. There is no developer portal, no API
+    reference, no OpenAPI document, no published base URL, no SDK, and no
+    documented authentication scheme for programmatic access. embarkvet.com/developers
+    returns HTTP 404. No realtime, bidirectional, or streaming WebSocket
+    (ws:// or wss://) endpoint is documented anywhere on Embark's platform.
+  publicApi: |
+    None documented. Access to Embark data is via (1) the consumer web dashboard
+    and mobile apps, (2) a per-account raw genetic data file download, and (3)
+    partnership-gated research collaboration. None of these is a self-serve,
+    documented developer API.
+  accessModel:
+    - channel: Consumer web dashboard
+      documented: true
+      programmatic: false
+      note: Results (breed, health, traits, relatives) viewed at my.embarkvet.com / embarkvet.com account.
+    - channel: Mobile apps (iOS / Android)
+      documented: true
+      programmatic: false
+      note: Embark Vet apps present the same results; no public app-facing API is documented.
+    - channel: Raw genetic data download
+      documented: true
+      programmatic: false
+      note: Customers own their dog's data and can download the raw genetic data file to share with breed clubs, health databases, or researchers. A file export, not an API.
+    - channel: Breeder dashboard (Pair Predictor, eCOI)
+      documented: true
+      programmatic: false
+      note: Breeder tools are web dashboard features (litter/pairing predictions), not a documented programmatic interface.
+    - channel: Research / breed club partnership
+      documented: true
+      programmatic: false
+      note: Data for research runs through direct partnership (Cornell, NIH, Morris Animal Foundation, breed clubs), not a public API.
+  transports:
+    - protocol: REST
+      documented: false
+      note: No public REST API, base URL, or API reference is documented for Embark.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented anywhere on Embark's platform as of the review date.
+    - protocol: GraphQL
+      documented: false
+      note: No public GraphQL endpoint documented.
+  endpointsConfirmedRest: []
+  endpointsModeled: none
+sources:
+  - url: https://embarkvet.com/
+    type: Website
+    note: Consumer dog DNA testing homepage. No developer / API links.
+  - url: https://embarkvet.com/how-it-works/
+    type: Documentation
+    note: Cheek-swab workflow; results delivered online in ~2-4 weeks. No API.
+  - url: https://embarkvet.com/developers
+    type: DeveloperPortal
+    note: HTTP 404 - no developer portal exists.
+  - url: https://shop.embarkvet.com/products/breed-and-health-dog-dna-test-kit
+    type: Pricing
+    note: Breed + Health kit pricing (regular ~$199, sale ~$118); Breed ID ~$129.
+  - url: https://embarkvet.com/breeders/tools-and-services/
+    type: Documentation
+    note: Breeder dashboard tools (Pair Predictor, eCOI). Web features, not an API.
+  - url: https://help.embarkvet.com/hc/en-us/sections/10867850136731-Partner-With-Us
+    type: Documentation
+    note: Partner program - partnership-gated, not a self-serve API.
+  - url: https://en.wikipedia.org/wiki/Embark_Veterinary
+    type: Reference
+    note: Company background (founded 2015, Boston; Cornell research partnership). No API mentioned.
+  - url: https://github.com/ProjectAussie
+    type: SourceCode
+    note: Research/publication code from Embark scientists. Not a company product API.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No WebSocket protocol surface exists, and Embark publishes no public developer
+    API of any kind. Embark is a direct-to-consumer canine genetics service; data
+    reaches users through its own web/app dashboards and a per-account raw data
+    download, with research access gated behind direct partnership. No AsyncAPI or
+    OpenAPI document was created because there is no documented API surface on
+    Embark's own platform to model, and no apis were listed in apis.yml for the
+    same reason. This entry is an honest stub.
