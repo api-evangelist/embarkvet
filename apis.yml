@@ -26,6 +26,8 @@ created: '2026-07-03'
 modified: '2026-07-03'
 specificationVersion: '0.19'
 common:
+- type: DomainSecurity
+  url: security/embarkvet-domain-security.yml
 - type: Website
   url: https://embarkvet.com/
 - type: LinkedIn
@@ -36,6 +38,8 @@ common:
   url: https://help.embarkvet.com/hc/en-us
 - type: Partnerships
   url: https://help.embarkvet.com/hc/en-us/sections/10867850136731-Partner-With-Us
+- type: Blog
+  url: https://embarkvet.com/feed/
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
