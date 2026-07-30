@@ -13,7 +13,18 @@ description: Embark Veterinary is a canine genomics and biotechnology company th
   publish a documented public or partner developer API; results are consumed through
   Embark's own web/app dashboards, and customers can download their dog's raw genetic
   data file for personal use and sharing.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: approval
+  trial: false
+  try_now: false
+  public: false
+  label: Requires approval
+  confidence: medium
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/embarkvet.png
 tags:
 - Canine Genomics
 - Dog DNA Test
