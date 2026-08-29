@@ -13,6 +13,17 @@ description: Embark Veterinary is a canine genomics and biotechnology company th
   publish a documented public or partner developer API; results are consumed through
   Embark's own web/app dashboards, and customers can download their dog's raw genetic
   data file for personal use and sharing.
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: approval
