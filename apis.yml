@@ -2,17 +2,14 @@ aid: embarkvet
 url: https://raw.githubusercontent.com/api-evangelist/embarkvet/refs/heads/main/apis.yml
 name: Embark Veterinary
 kind: company
-description: Embark Veterinary is a canine genomics and biotechnology company that
-  sells at-home dog DNA test kits for breed identification, ancestry, and genetic
-  health screening. Using a cheek-swab sample and a proprietary genotyping platform
-  that analyzes over 200,000 genetic markers, Embark reports 400+ breeds, 270+ genetic
-  health conditions, allergy risk, coat and trait predictions, a relative finder,
-  and a breeder dashboard with a Pair Predictor tool. Embark is a direct-to-consumer
-  service delivered through its website, mobile apps, and a research partner program
-  (Cornell University, NIH, Morris Animal Foundation). As of this review it does not
-  publish a documented public or partner developer API; results are consumed through
-  Embark's own web/app dashboards, and customers can download their dog's raw genetic
-  data file for personal use and sharing.
+description: Embark Veterinary is a canine genomics and biotechnology company that sells at-home dog DNA test kits
+  for breed identification, ancestry, and genetic health screening. Using a cheek-swab sample and a proprietary
+  genotyping platform that analyzes over 200,000 genetic markers, Embark reports 400+ breeds, 270+ genetic health
+  conditions, allergy risk, coat and trait predictions, a relative finder, and a breeder dashboard with a Pair Predictor
+  tool. Embark is a direct-to-consumer service delivered through its website, mobile apps, and a research partner
+  program (Cornell University, NIH, Morris Animal Foundation). As of this review it does not publish a documented
+  public or partner developer API; results are consumed through Embark's own web/app dashboards, and customers can
+  download their dog's raw genetic data file for personal use and sharing.
 deliveryModel:
   model: unknown
   open_source: false
@@ -62,6 +59,8 @@ common:
   url: https://help.embarkvet.com/hc/en-us/sections/10867850136731-Partner-With-Us
 - type: Blog
   url: https://embarkvet.com/feed/
+- type: Blog
+  url: https://embarkvet.com/resources/
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
