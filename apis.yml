@@ -27,6 +27,9 @@ accessModel:
   trial: false
   try_now: false
   public: false
+  gated: private
+  gated_source:
+  - tag:No Public API
   label: Requires approval
   confidence: medium
   source: []
@@ -40,7 +43,6 @@ tags:
 - Genetic Health
 - Direct to Consumer
 - Pet Tech
-- No Public API
 created: '2026-07-03'
 modified: '2026-07-03'
 specificationVersion: '0.23'
@@ -64,3 +66,5 @@ common:
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
+x-tags-removed:
+- No Public API
