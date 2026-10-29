@@ -1,4 +1,4 @@
-# Embark Veterinary (embarkvet)
+# Embark Veterinary
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,57 +64,81 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Embark Veterinary is a canine genomics and biotechnology company (founded 2015; headquartered in Boston, Massachusetts) that sells at-home dog DNA test kits for breed identification, ancestry, and genetic health screening. A cheek-swab sample is analyzed on Embark's proprietary genotyping platform of 200,000+ genetic markers, and results — 400+ breeds, 270+ genetic health conditions, allergy risk, coat/trait predictions, a relative finder, and (for breeders) a Pair Predictor and eCOI dashboard — are delivered through Embark's website and mobile apps.
+Embark Veterinary is a canine genomics and biotechnology company that sells at-home dog DNA test kits for breed identification, ancestry, and genetic health screening. Using a cheek-swab sample and a proprietary genotyping platform that analyzes over 200,000 genetic markers, Embark reports 400+ breeds, 270+ genetic health conditions, allergy risk, coat and trait predictions, a relative finder, and a breeder dashboard with a Pair Predictor tool. Embark is a direct-to-consumer service delivered through its website, mobile apps, and a research partner program (Cornell University, NIH, Morris Animal Foundation). As of this review it does not publish a documented public or partner developer API; results are consumed through Embark's own web/app dashboards, and customers can download their dog's raw genetic data file for personal use and sharing.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/embarkvet/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/embarkvet/refs/heads/main/apis.yml)
+**Areas:** Canine Genomics · Dog DNA Test · Breed Identification · Genetic Health · Direct to Consumer · Pet Tech
 
-## API Access Model — No Public Developer API
+## Embark Veterinary on APIs.io
 
-As of this review (2026-07-03), Embark does **not** publish a documented public or partner developer API. This entry is an honest stub. Findings:
+Everything profiled for Embark Veterinary is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/embarkvet/](https://apis.io/providers/embarkvet/)** — or go straight to one of the APIs or properties below.
 
-- **Consumer / DTC delivery.** Embark is a direct-to-consumer genetics service. Results are consumed through Embark's own web dashboard and its iOS/Android apps, not through a programmatic API for third-party developers.
-- **No developer portal or API docs.** There is no `developers` page, API reference, OpenAPI document, published base URL, SDK, or authentication scheme for an Embark data API. (`embarkvet.com/developers` returns 404.)
-- **Raw data download, not an API.** Embark's differentiator is data ownership: every customer can freely **download their dog's raw genetic data file** and share it with a breed club, a health database, or a researcher. This is a per-account file export, not a queryable API.
-- **Breeder tools are a dashboard.** The breeder offering (Pair Predictor, eCOI, base coat color predictions, litter planning) is a web dashboard feature set, not a documented programmatic interface.
-- **Research is partnership-gated.** Embark collaborates with research partners (Cornell University College of Veterinary Medicine, NIH, Morris Animal Foundation, breed clubs) and publishes research code under the `ProjectAussie` GitHub organization. Data access for research runs through direct partnership (research@ / breeders@ / partner program), not a self-serve API.
+### Published properties
 
-Because no API surface is documented, no `apis` are listed in `apis.yml`, and no `openapi/`, `plans/`, `rate-limits/`, `finops/`, or `collections/` artifacts were created (nothing to model without fabrication). If Embark publishes a developer or partner API in the future, this entry should be upgraded with real, sourced endpoints.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Products & Pricing (DNA kits, not API plans)
+#### Security (1)
 
-Consumer product prices as listed on shop.embarkvet.com / retail partners (USD, subject to promotions):
+Authentication, trust centre, and vulnerability disclosure.
 
-- **Breed + Health Dog DNA Test** — regular ~$199 (frequently on sale ~$118); 400+ breeds and 270+ health conditions, allergy risk, relatives, traits.
-- **Breed Identification Dog DNA Test** — regular ~$129 (sale ~$109); ancestry/breed mix without the health screening.
-- **Embark for Breeders Dog DNA Test** — breeder-tier kit with the breeder dashboard and Pair Predictor tools.
-- Also sells probiotics and health supplements.
+- [Embarkvet Domain Security](https://apis.io/security/embarkvet/embarkvet-domain-security/)
 
-Kits ship a cheek swab; results are typically available online in ~2–4 weeks.
+## Where to find this API
 
-## Tags
-
-- Canine Genomics
-- Dog DNA Test
-- Breed Identification
-- Genetic Health
-- Direct to Consumer
-- Pet Tech
-- No Public API
-
-## Timestamps
-
-- **Created:** 2026-07-03
-- **Modified:** 2026-07-03
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://embarkvet.com/)
-- [LinkedIn](https://www.linkedin.com/company/embark-vet)
-- [Store](https://shop.embarkvet.com/)
 - [Support](https://help.embarkvet.com/hc/en-us)
-- [Partnerships](https://help.embarkvet.com/hc/en-us/sections/10867850136731-Partner-With-Us)
+- [Blog](https://embarkvet.com/feed/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 5.1** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 0.0 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 4.7** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/embarkvet/](https://apis.io/providers/embarkvet/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Embark Veterinary: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/embarkvet/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
